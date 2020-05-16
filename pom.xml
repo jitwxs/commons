@@ -8,6 +8,7 @@
     <artifactId>commons</artifactId>
     <packaging>pom</packaging>
     <version>${revision}</version>
+    <description>A simple and useful java commons packaging</description>
 
     <modules>
         <module>commons-core</module>
@@ -42,10 +43,6 @@
     </developers>
 
     <properties>
-        <maven.compiler.version>3.8.1</maven.compiler.version>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-
         <revision>1.0</revision>
         <junit.version>4.13</junit.version>
 
@@ -187,10 +184,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven.compiler.version}</version>
+                <version>3.8.1</version>
                 <configuration>
-                    <source>${maven.compiler.source}</source>
-                    <target>${maven.compiler.target}</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>
