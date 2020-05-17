@@ -1,5 +1,8 @@
-
 ## Self Project Commons Dependency Package
+
+[![Release](https://img.shields.io/github/v/release/jitwxs/commons.svg)](https://github.com/jitwxs/commons/releases)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![MavenCenter](https://maven-badges.herokuapp.com/maven-central/com.github.jitwxs/commons/badge.svg)](https://oss.sonatype.org)
 
 ### How to use it
 
