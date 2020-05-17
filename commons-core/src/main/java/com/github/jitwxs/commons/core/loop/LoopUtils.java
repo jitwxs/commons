@@ -3,10 +3,12 @@ package com.github.jitwxs.commons.core.loop;
 import java.util.concurrent.TimeUnit;
 
 /**
+ * 通用循环工具类
  * @author jitwxs
- * @date 2020年05月16日 20:41
  */
 public class LoopUtils {
+    private static final int DEFAULT_SLEEP = 500;
+
     /**
      * 循环方法
      * @param millis 单次执行间隔
@@ -17,7 +19,7 @@ public class LoopUtils {
         int times = 0;
         while (callback.execute(times)) {
             try {
-                TimeUnit.MILLISECONDS.sleep(millis == 0L ? 500 : millis);
+                TimeUnit.MILLISECONDS.sleep(millis == 0L ? DEFAULT_SLEEP : millis);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }

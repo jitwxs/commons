@@ -10,8 +10,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
+ * 线程工具类
  * @author jitwxs
- * @date 2020年05月16日 17:05
  */
 public class ThreadUtils {
     private static final Logger logger = Logger.getLogger(ThreadUtils.class.getName());

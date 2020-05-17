@@ -1,8 +1,8 @@
 package com.github.jitwxs.commons.core.constant;
 
 /**
+ * 常量字符
  * @author jitwxs
- * @date 2020年05月16日 17:58
  */
 public class Symbol {
     public static final String COMMA = ",";

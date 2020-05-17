@@ -16,9 +16,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * JackJson
+ * Jackson工具类
  * @author jitwxs
- * @date 2020年05月16日 22:13
  */
 public class JacksonUtils {
     private static final Logger logger = Logger.getLogger(JacksonUtils.class.getName());
@@ -35,6 +34,8 @@ public class JacksonUtils {
 
     /**
      * 如不需要默认的 Mapper 配置，调用该方法，进行自定义配置
+     *
+     * @param mapper 序列化对象
      */
     public static void resetObjectMapper(ObjectMapper mapper) {
         MAPPER = mapper;
@@ -44,9 +45,10 @@ public class JacksonUtils {
     }
 
     /**
-     * 对象-->Json字符串
-     * @author jitwxs
-     * @version 创建时间：2018年4月17日 下午3:39:35
+     * 对象 转 Json字符串
+     *
+     * @param data java对象
+     * @return json字符串
      */
     public static String objectToJson(Object data) {
         try {
@@ -58,9 +60,12 @@ public class JacksonUtils {
     }
 
     /**
-     * Json字符串-->对象
-     * @author jitwxs
-     * @version 创建时间：2018年4月17日 下午3:39:45
+     * Json字符串 转 对象
+     *
+     * @param jsonData json字符串
+     * @param clazz java对象类型
+     * @param <T> 泛型
+     * @return java对象
      */
     public static <T> T jsonToObject(String jsonData, Class<T> clazz) {
         try {
@@ -72,9 +77,12 @@ public class JacksonUtils {
     }
 
     /**
-     * Json字符串--> List<对象>
-     * @author jitwxs
-     * @version 创建时间：2018年4月17日 下午3:40:09
+     * Json字符串 转 List
+     *
+     * @param jsonData json字符串
+     * @param clazz java对象类型
+     * @param <T> 泛型
+     * @return 对象List
      */
     public static <T> List<T> jsonToList(String jsonData, Class<T> clazz) {
         JavaType javaType = MAPPER.getTypeFactory().constructParametricType(List.class, clazz);
@@ -86,6 +94,13 @@ public class JacksonUtils {
         return Collections.emptyList();
     }
 
+    /**
+     * Json字符串 转 Map
+     *
+     * @param jsonData json字符串
+     * @param <T> 泛型
+     * @return 对象Map
+     */
     public static <T> Map<String, T> jsonToMap(String jsonData) {
         ObjectMapper mapper = new ObjectMapper();
         try {
@@ -96,15 +111,13 @@ public class JacksonUtils {
         return Collections.emptyMap();
     }
 
-    public static String mapToJson(Map map) {
-        try {
-            return MAPPER.writeValueAsString(map);
-        } catch (JsonProcessingException e) {
-            logger.log(Level.WARNING, "JsonUtils#mapToJson failed, map: " + map, e);
-        }
-        return StringUtils.EMPTY;
-    }
-
+    /**
+     * Json字符串 转 Set
+     *
+     * @param jsonData json字符串
+     * @param <T> 泛型
+     * @return 对象Set
+     */
     public static <T> Set<T> jsonToSet(String jsonData) {
         ObjectMapper mapper = new ObjectMapper();
         try {
@@ -113,14 +126,5 @@ public class JacksonUtils {
             logger.log(Level.WARNING, "JsonUtils#jsonToSet failed, data: " + jsonData, e);
         }
         return Collections.emptySet();
-    }
-
-    public static String setToJson(Set<?> set) {
-        try {
-            return MAPPER.writeValueAsString(set);
-        } catch (JsonProcessingException e) {
-            logger.log(Level.WARNING, "JsonUtils#setToJson failed, data: " + set, e);
-        }
-        return StringUtils.EMPTY;
     }
 }

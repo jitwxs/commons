@@ -9,13 +9,17 @@ import java.util.Date;
 import java.util.Objects;
 
 /**
+ * 日期/字符串转换工具类
  * @author jitwxs
- * @date 2020年05月16日 22:42
  */
 public class DateFormatUtils {
 
     /**
-     * 日期字符串 -> LocalDateTime
+     * 日期字符串 转 LocalDateTime
+     *
+     * @param dateStr 日期字符串
+     * @param formatter 格式化规则
+     * @return LocalDateTime
      */
     public static LocalDateTime parserDateTime(String dateStr, DateTimeFormatter formatter) {
         Objects.requireNonNull(dateStr, "dateStr params not allow null");
@@ -33,7 +37,11 @@ public class DateFormatUtils {
     }
 
     /**
-     * LocalDateTime -> 日期字符串
+     * LocalDateTime 转 日期字符串
+     *
+     * @param localDateTime 日期
+     * @param formatter 格式化规则
+     * @return 日期字符串
      */
     public static String formatDate(LocalDateTime localDateTime, DateTimeFormatter formatter) {
         Objects.requireNonNull(localDateTime, "localDateTime params not allow null");
@@ -43,7 +51,11 @@ public class DateFormatUtils {
     }
 
     /**
-     * Timestamp -> 日期字符串
+     * Timestamp 转 日期字符串
+     *
+     * @param timestamp 时间戳
+     * @param formatter 格式化规则
+     * @return 日期字符串
      */
     public static String formatTimestamp(long timestamp, DateTimeFormatter formatter) {
         LocalDateTime localDateTime = LocalDateTime.ofInstant(Instant.ofEpochMilli(timestamp), ZoneId.systemDefault());
@@ -51,7 +63,11 @@ public class DateFormatUtils {
     }
 
     /**
-     * 日期字符串 -> Date
+     * 日期字符串 转 Date
+     *
+     * @param dateStr 日期字符串
+     * @param formatter 格式化规则
+     * @return Date
      */
     public static Date parserDate(String dateStr, DateTimeFormatter formatter) {
         LocalDateTime localDateTime = parserDateTime(dateStr, formatter);
@@ -60,7 +76,11 @@ public class DateFormatUtils {
     }
 
     /**
-     * Date -> 日期字符串
+     * Date 转 日期字符串
+     *
+     * @param date Date
+     * @param formatter 格式化规则
+     * @return 日期字符串
      */
     public static String formatDate(Date date, DateTimeFormatter formatter) {
         Objects.requireNonNull(date, "date params not allow null");
