@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <name>Jitwxs Commons Web</name>
-    <artifactId>conmons-web</artifactId>
+    <artifactId>commons-web</artifactId>
     <packaging>jar</packaging>
 
     <dependencies>
