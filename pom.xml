@@ -7,7 +7,7 @@
     <groupId>com.github.jitwxs</groupId>
     <artifactId>commons</artifactId>
     <packaging>pom</packaging>
-    <version>1.2</version>
+    <version>1.3</version>
     <description>A simple and useful java commons packaging</description>
 
     <modules>
@@ -49,8 +49,10 @@
         <commons-collection.version>4.4</commons-collection.version>
         <guava.version>29.0-jre</guava.version>
         <jackson.version>2.11.0</jackson.version>
+        <lombok.version>1.18.12</lombok.version>
 
         <spring.version>5.2.6.RELEASE</spring.version>
+        <java-servlet-api.version>4.0.1</java-servlet-api.version>
         <okhttp.version>4.6.0</okhttp.version>
     </properties>
 
@@ -70,6 +72,11 @@
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
@@ -96,6 +103,11 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-context</artifactId>
                 <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${java-servlet-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.squareup.okhttp3</groupId>

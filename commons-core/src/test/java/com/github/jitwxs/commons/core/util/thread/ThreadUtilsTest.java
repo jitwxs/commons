@@ -1,4 +1,4 @@
-package com.github.jitwxs.commons.core.thread;
+package com.github.jitwxs.commons.core.util.thread;
 
 import org.junit.Test;
 

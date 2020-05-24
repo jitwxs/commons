@@ -1,10 +1,12 @@
-package com.github.jitwxs.commons.core.json;
+package com.github.jitwxs.commons.core.util;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.IOException;
@@ -19,6 +21,7 @@ import java.util.logging.Logger;
  * Jackson工具类
  * @author jitwxs
  */
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class JacksonUtils {
     private static final Logger logger = Logger.getLogger(JacksonUtils.class.getName());
 
@@ -39,9 +42,6 @@ public class JacksonUtils {
      */
     public static void resetObjectMapper(ObjectMapper mapper) {
         MAPPER = mapper;
-    }
-
-    private JacksonUtils() {
     }
 
     /**

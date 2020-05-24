@@ -1,9 +1,13 @@
-package com.github.jitwxs.commons.core.date;
+package com.github.jitwxs.commons.core.util;
+
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
 /**
  * 时间工具类
  * @author jitwxs
  */
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class TimeUtils {
     /**
      * @return 当前毫秒数

@@ -1,4 +1,8 @@
-package com.github.jitwxs.commons.core.loop;
+package com.github.jitwxs.commons.core.util;
+
+import com.github.jitwxs.commons.core.loop.LoopCallback;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
 import java.util.concurrent.TimeUnit;
 
@@ -6,6 +10,7 @@ import java.util.concurrent.TimeUnit;
  * 通用循环工具类
  * @author jitwxs
  */
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class LoopUtils {
     private static final int DEFAULT_SLEEP = 500;
 

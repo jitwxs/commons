@@ -1,11 +1,16 @@
-package com.github.jitwxs.commons.core;
+package com.github.jitwxs.commons.core.util.datatype;
+
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 /**
  * double 类型计算工具类
  * @author jitwxs
  */
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class DoubleUtils {
     /**
      * 对double数据进行取精度. 返回最大的（最接近正无穷大）double 值，该值小于等于参数，并等于某个整数。

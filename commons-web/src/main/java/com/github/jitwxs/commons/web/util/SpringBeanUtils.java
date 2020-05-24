@@ -1,5 +1,7 @@
-package com.github.jitwxs.commons.web;
+package com.github.jitwxs.commons.web.util;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
@@ -10,6 +12,7 @@ import org.springframework.stereotype.Component;
  * @author jitwxs
  */
 @Component
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class SpringBeanUtils implements ApplicationContextAware {
     private static ApplicationContext CONTEXT;
 

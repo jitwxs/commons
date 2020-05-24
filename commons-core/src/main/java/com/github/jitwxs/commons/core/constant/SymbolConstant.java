@@ -1,10 +1,14 @@
 package com.github.jitwxs.commons.core.constant;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
 /**
  * 常量字符
  * @author jitwxs
  */
-public class Symbol {
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+public class SymbolConstant {
     public static final String COMMA = ",";
 
     public static final String AND = "&";

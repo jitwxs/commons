@@ -1,6 +1,8 @@
-package com.github.jitwxs.commons.core.thread;
+package com.github.jitwxs.commons.core.util.thread;
 
 import com.github.jitwxs.commons.core.loop.Callback;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 
@@ -13,6 +15,7 @@ import java.util.logging.Logger;
  * 线程工具类
  * @author jitwxs
  */
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class ThreadUtils {
     private static final Logger logger = Logger.getLogger(ThreadUtils.class.getName());
 

@@ -1,4 +1,7 @@
-package com.github.jitwxs.commons.core.date;
+package com.github.jitwxs.commons.core.util.date;
+
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
@@ -10,6 +13,7 @@ import java.util.Objects;
  * 日期工具类
  * @author jitwxs
  */
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class DateUtils {
     /**
      * LocalDateTime 转 Date

@@ -1,6 +1,8 @@
-package com.github.jitwxs.commons.core;
+package com.github.jitwxs.commons.core.util;
 
 import com.google.common.base.Joiner;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 
@@ -10,6 +12,7 @@ import java.util.List;
  * 集合处理工具类
  * @author jitwxs
  */
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class DataUtils {
     /**
      * 将集合转为分隔符分割的字符串

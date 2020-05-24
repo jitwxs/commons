@@ -1,9 +1,12 @@
-package com.github.jitwxs.commons.core.thread;
+package com.github.jitwxs.commons.core.util.thread;
 
 import com.github.jitwxs.commons.core.loop.Callback;
-import com.github.jitwxs.commons.core.constant.Symbol;
+import com.github.jitwxs.commons.core.constant.SymbolConstant;
+import com.github.jitwxs.commons.core.handler.DefaultLogUncaughtExceptionHandler;
 import com.google.common.base.Joiner;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
 import java.util.Objects;
 import java.util.concurrent.*;
@@ -13,6 +16,7 @@ import java.util.logging.Logger;
  * 线程池工具类
  * @author jitwxs
  */
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class ThreadPoolUtils {
     private static final Logger logger = Logger.getLogger(ThreadUtils.class.getName());
 
@@ -39,7 +43,7 @@ public class ThreadPoolUtils {
         ThreadFactoryBuilder builder = new ThreadFactoryBuilder();
         builder.setUncaughtExceptionHandler(handler);
         if(Objects.nonNull(name)) {
-            builder.setNameFormat(Joiner.on(Symbol.LINE).join(name));
+            builder.setNameFormat(Joiner.on(SymbolConstant.LINE).join(name));
         }
 
         return new ThreadPoolExecutor(size, size, 60, TimeUnit.SECONDS, new LinkedBlockingQueue<>(),
@@ -74,7 +78,7 @@ public class ThreadPoolUtils {
         ThreadFactoryBuilder builder = new ThreadFactoryBuilder();
         builder.setUncaughtExceptionHandler(handler);
         if(Objects.nonNull(name)) {
-            builder.setNameFormat(Joiner.on(Symbol.LINE).join(name));
+            builder.setNameFormat(Joiner.on(SymbolConstant.LINE).join(name));
         }
 
         return new ThreadPoolExecutor(core, max, keepAlive, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>(maxQueueSize),
@@ -105,7 +109,7 @@ public class ThreadPoolUtils {
         builder.setUncaughtExceptionHandler(handler);
         builder.setDaemon(true);
         if(Objects.nonNull(name)) {
-            builder.setNameFormat(Joiner.on(Symbol.LINE).join(name));
+            builder.setNameFormat(Joiner.on(SymbolConstant.LINE).join(name));
         }
 
         return new ScheduledThreadPoolExecutor(core, builder.build());

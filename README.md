@@ -39,16 +39,18 @@
 | ThreadUtils     | 线程工具类            |
 | ThreadPoolUtils | 线程池工具类          |
 | DataUtils       | 集合处理工具类        |
-| DoubleUtils     | double类型计算工具类  |
-| JacksonUtils    | Jackson工具类         |
+| DoubleUtils     | double 类型计算工具类  |
+| BitUtils        | 位操作工具类        |
+| ByteUtils       | 字节操作工具类        |
+| JacksonUtils    | Jackson 工具类        |
 
 #### Web Package
 
 | Filename        | Features             |
 | --------------- | -------------------- |
 | BeanCopierUtils | 浅拷贝工具类         |
-| SpringBeanUtils | SpringBean管理工具类 |
-
+| SpringBeanUtils | SpringBean 管理工具类 |
+| CookieUtils     | Cookie 工具类         |
 
 ### Developers And Contributor
 

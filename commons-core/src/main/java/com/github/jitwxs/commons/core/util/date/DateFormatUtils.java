@@ -1,5 +1,7 @@
-package com.github.jitwxs.commons.core.date;
+package com.github.jitwxs.commons.core.util.date;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
 
 import java.time.*;
@@ -12,6 +14,7 @@ import java.util.Objects;
  * 日期/字符串转换工具类
  * @author jitwxs
  */
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class DateFormatUtils {
 
     /**
@@ -22,6 +25,7 @@ public class DateFormatUtils {
      * @return LocalDateTime
      */
     public static LocalDateTime parserDateTime(String dateStr, DateTimeFormatter formatter) {
+        Objects.requireNonNull(formatter, "formatter params not allow null");
         Objects.requireNonNull(dateStr, "dateStr params not allow null");
         if(StringUtils.isBlank(dateStr)) {
             return null;
@@ -58,6 +62,8 @@ public class DateFormatUtils {
      * @return 日期字符串
      */
     public static String formatTimestamp(long timestamp, DateTimeFormatter formatter) {
+        Objects.requireNonNull(formatter, "formatter params not allow null");
+
         LocalDateTime localDateTime = LocalDateTime.ofInstant(Instant.ofEpochMilli(timestamp), ZoneId.systemDefault());
         return formatter.format(localDateTime);
     }
@@ -83,8 +89,6 @@ public class DateFormatUtils {
      * @return 日期字符串
      */
     public static String formatDate(Date date, DateTimeFormatter formatter) {
-        Objects.requireNonNull(date, "date params not allow null");
-
         return formatDate(DateUtils.parserDateTime(date), formatter);
     }
 }

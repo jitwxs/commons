@@ -1,4 +1,4 @@
-package com.github.jitwxs.commons.core.thread;
+package com.github.jitwxs.commons.core.handler;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

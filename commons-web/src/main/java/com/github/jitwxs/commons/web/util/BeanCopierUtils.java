@@ -1,6 +1,8 @@
-package com.github.jitwxs.commons.web;
+package com.github.jitwxs.commons.web.util;
 
-import com.github.jitwxs.commons.core.constant.Symbol;
+import com.github.jitwxs.commons.core.constant.SymbolConstant;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import org.springframework.cglib.beans.BeanCopier;
 
 import java.util.Map;
@@ -10,6 +12,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * 浅拷贝工具类
  * @author jitwxs
  */
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class BeanCopierUtils {
     private static final Map<String, BeanCopier> CACHE = new ConcurrentHashMap<>();
 
@@ -36,6 +39,6 @@ public class BeanCopierUtils {
     }
 
     private static String generatorKey(Class<?> sourceClazz, Class<?> targetClazz) {
-        return sourceClazz + Symbol.UNDERLINE + targetClazz;
+        return sourceClazz + SymbolConstant.UNDERLINE + targetClazz;
     }
 }
