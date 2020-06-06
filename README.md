@@ -33,16 +33,17 @@
 | Filename        | Features              |
 | --------------- | --------------------- |
 | DateUtils       | 日期工具类            |
-| DateFormatUtils | 日期/字符串转换工具类 |
+| DateFormatUtils | 日期/字符串转换工具类   |
 | TimeUtils       | 时间工具类            |
-| LoopUtils       | 通用循环工具类        |
+| LoopUtils       | 通用循环工具类         |
 | ThreadUtils     | 线程工具类            |
 | ThreadPoolUtils | 线程池工具类          |
 | DataUtils       | 集合处理工具类        |
-| DoubleUtils     | double 类型计算工具类  |
-| BitUtils        | 位操作工具类        |
+| DoubleUtils     | double 类型计算工具类 |
+| BitUtils        | 位操作工具类          |
 | ByteUtils       | 字节操作工具类        |
-| JacksonUtils    | Jackson 工具类        |
+| JacksonUtils    | Jackson 工具类       |
+| SnowFlakeIdGenerator | 雪花算法ID生成器 |
 
 #### Web Package
 
