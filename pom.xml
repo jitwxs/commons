@@ -48,7 +48,7 @@
         <commons-lang3.version>3.10</commons-lang3.version>
         <commons-collection.version>4.4</commons-collection.version>
         <guava.version>29.0-jre</guava.version>
-        <jackson.version>2.11.0</jackson.version>
+        <jackson.version>2.12.6.1</jackson.version>
         <lombok.version>1.18.12</lombok.version>
 
         <spring.version>5.2.6.RELEASE</spring.version>
